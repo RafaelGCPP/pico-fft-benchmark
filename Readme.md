@@ -1,6 +1,6 @@
 # pico-fft-benchmark
 
-This repository contains a benchmark for the [simple_fft](https://github.com/RafaelGCPP/simple_fft) library running on the Raspberry Pi Pico.
+This repository contains a benchmark for my [simple_fft](https://github.com/RafaelGCPP/simple_fft) library running on the Raspberry Pi Pico.
 
 ## Installation
 
