@@ -3,16 +3,24 @@
 #include "../testset/test_set.h"
 #include "benchmark.h"
 #include "hardware/clocks.h"
+#include "tusb.h"
+#include "hardware/vreg.h"
 
 int main()
 {
+    //   vreg_set_voltage(VREG_VOLTAGE_1_15);
+
+    //    set_sys_clock_khz(300000, false);
     stdio_init_all();
+
+    while (!tud_cdc_connected())
+    {
+        sleep_ms(100);
+    }
 start:
-    sleep_ms(10000);
 
     putchar(12); // FF - clears screen
 
-    set_sys_clock_khz(200000, true);
     printf("Current clock speed: %6.2f MHz\n", (float)clock_get_hz(clk_sys) / 1000000);
     sleep_ms(2000);
 
@@ -28,6 +36,8 @@ start:
     fixed_fft_benchmark();
 
     puts("Testing restarts in 10 seconds.");
+    sleep_ms(10000);
+
     goto start;
 
     return 0;
