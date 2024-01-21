@@ -21,6 +21,14 @@ Follow these steps to install and run the benchmark:
 
 3. Build and flash the benchmark code to your Raspberry Pi Pico using your preferred development environment.
 
+    ```cd pico-fft-benchmark
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
+
+
 ## Usage
 
 Once the benchmark code is flashed to your Raspberry Pi Pico, you can run the benchmark by following these steps:
