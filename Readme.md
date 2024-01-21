@@ -45,7 +45,7 @@ Once the benchmark code is flashed to your Raspberry Pi Pico, you can run the be
 The following table presents the benchmark results for a Raspberry Pi Pico running at 125MHz. It shows the time per transformation for fixed and floating-point operations at different numbers of data points (N).
 
 | N    | Floating Point | Fixed Point |
-| ---- | --------------:| -----------:|
+| ----:| --------------:| -----------:|
 | 8    | 76.44&mu;s    | 12.6&mu;s   |
 | 16   | 196.25&mu;s   | 33.52&mu;s  |
 | 32   | 476.32&mu;s   | 87.18&mu;s  |
@@ -59,7 +59,7 @@ The following table presents the benchmark results for a Raspberry Pi Pico runni
 The results at 200MHz show a linear reduction in the time per transformation with the increase in clock frequency.
 
 | N    | Floating Point | Fixed Point |
-| ---- | --------------:| -----------:|
+| ----:| --------------:| -----------:|
 | 8    | 47.89&mu;s    | 7.76&mu;s   |
 | 16   | 122.92&mu;s   | 21.06&mu;s  |
 | 32   | 297.33&mu;s   | 54.47&mu;s  |
