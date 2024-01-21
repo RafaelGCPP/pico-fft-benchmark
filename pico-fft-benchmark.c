@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "../testset/test_set.h"
 #include "benchmark.h"
+#include "hardware/clocks.h"
 
 int main()
 {
@@ -10,6 +11,10 @@ start:
     sleep_ms(10000);
 
     putchar(12); // FF - clears screen
+
+    set_sys_clock_khz(200000, true);
+    printf("Current clock speed: %6.2f MHz\n", (float)clock_get_hz(clk_sys) / 1000000);
+    sleep_ms(2000);
 
     cordic_test();
     twiddle_test();
