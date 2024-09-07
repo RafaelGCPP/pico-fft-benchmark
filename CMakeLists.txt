@@ -23,15 +23,15 @@ project(pico-fft-benchmark C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
-add_subdirectory(simple-fft)
+add_subdirectory(simple_fft)
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(pico-fft-benchmark 
     pico-fft-benchmark.c 
     benchmark.c
-    simple-fft/testset/complex_fft_tests.c
-    simple-fft/testset/real_fft_tests.c
-    simple-fft/testset/utils_tests.c)
+    simple_fft/testset/complex_fft_tests.c
+    simple_fft/testset/real_fft_tests.c
+    simple_fft/testset/utils_tests.c)
 
 pico_set_program_name(pico-fft-benchmark "pico-fft-benchmark")
 pico_set_program_version(pico-fft-benchmark "0.1")
@@ -50,7 +50,7 @@ target_link_libraries(pico-fft-benchmark
 target_include_directories(pico-fft-benchmark PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
   ${CMAKE_CURRENT_LIST_DIR}/.. # for our common lwipopts or any other standard includes, if required
-  simple-fft/include
+  simple_fft/include
 )
 
 # Add any user requested libraries
