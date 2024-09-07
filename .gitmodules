@@ -1,3 +1,3 @@
-[submodule "simple-fft"]
-	path = simple-fft
-	url = ./simple-fft
+[submodule "simple_fft"]
+	path = simple_fft
+	url = git@github.com:RafaelGCPP/simple_fft.git
